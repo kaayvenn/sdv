@@ -37,7 +37,7 @@ const client = new Client({
         dataPath: path.join(__dirname, ".wwebjs_auth")
     }),
     puppeteer: {
-        headless: false,
+        headless: true,
         executablePath: '/usr/bin/chromium',
         args: [
             '--no-sandbox',
