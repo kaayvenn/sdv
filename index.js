@@ -171,6 +171,19 @@ client.on('ready', () => {
 
 client.on('message', async msg => {
 
+    console.log(`
+========================
+MESSAGE RECEIVED
+========================
+FROM: ${msg.from}
+AUTHOR: ${msg.author || 'private'}
+BODY: ${msg.body}
+TYPE: ${msg.type}
+HAS MEDIA: ${msg.hasMedia}
+TIMESTAMP: ${new Date().toLocaleString()}
+========================
+`);
+
     if (!isOwner(msg)) return;
 
     if (msg.body === '!on') {
